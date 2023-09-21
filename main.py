@@ -3,7 +3,7 @@ def count_word(s):
     return countOfWords
 
 
-print(count_word('siena kys'))
+
 
 #J'ai fait un nouveau projet et je l'ai nommé word_count
 #J'ai mit un fichier et je l'ai nommé main.py
