@@ -1,0 +1,31 @@
+import random
+nombre_essais = 1
+oui_non = "oui"
+
+while oui_non == "oui": #loop pour recommencer.
+    x = random.randrange (0,1000)
+    print(x)
+    print("J’ai choisi un nombre au hasard entre 0 et 1000. \nÀ vous de le deviner...")
+
+    users_number = int(input("Quel est ton chiffre?"))
+    while users_number != x: #loop pour continuer à deviner.
+
+        if users_number < x: #indiquer si ce que l'utilisateur devine est trop petit.
+            nombre_essais = nombre_essais + 1
+            print("Mauvais choix, le nombre est plus grand que", users_number )
+
+        elif users_number > x: #indiquer si ce que l'utilisateur devine est trop grand.
+            nombre_essais = nombre_essais + 1
+            print("Mauvais choix, le nombre est plus petit que",users_number)
+
+        users_number = int(input("Quel est ton chiffre?"))
+    else: #indiquer à l'utilisateur s'il a raison.
+        print(("Oui! Bonne réponse! \nNombre d'essais :"),nombre_essais)
+
+    oui_non = str(input("Voulez-vous faire une autre partie?")) #demander à l'utilisateur s'il veut refaire une partie.
+    if oui_non == "oui":
+        print("ok")
+
+
+    elif oui_non == "non":
+        print("Merci et au revoir")
